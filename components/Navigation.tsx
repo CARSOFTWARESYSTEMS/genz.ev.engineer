@@ -45,7 +45,7 @@ export default function Navigation() {
         {/* Logo */}
         <Link href="/" className="group flex items-center gap-2.5">
           <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#00F5A0] to-[#00D4FF] flex items-center justify-center shadow-lg shadow-[#00F5A0]/20">
-            <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4">
+            <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4" aria-hidden="true">
               <path
                 d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"
                 fill="#050816"

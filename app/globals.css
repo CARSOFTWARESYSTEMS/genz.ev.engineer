@@ -60,3 +60,30 @@
 .marquee-pause:hover .animate-marquee-right {
   animation-play-state: paused;
 }
+
+/* GPU compositing hint for heavy continuous animations */
+.animate-marquee-left,
+.animate-marquee-right {
+  will-change: transform;
+}
+
+/* Respect system-level reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .animate-rotate-slow,
+  .animate-rotate-reverse,
+  .animate-scan-line,
+  .animate-radar-ping,
+  .animate-float,
+  .animate-marquee-left,
+  .animate-marquee-right,
+  .animate-data-stream {
+    animation: none;
+  }
+
+  .animate-pulse-glow,
+  .animate-pulse,
+  .animate-energy-pulse {
+    animation: none;
+    opacity: 0.5;
+  }
+}

@@ -10,25 +10,26 @@ export default function FinalCTA() {
   return (
     <section ref={sectionRef} id="join" className="relative py-36 px-6 overflow-hidden">
       {/* Grid background */}
-      <div className="absolute inset-0 grid-bg opacity-60" />
+      <div className="absolute inset-0 grid-bg opacity-60" aria-hidden="true" />
 
       {/* Central energy glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-gradient-radial from-[#00F5A0]/10 via-[#00D4FF]/4 to-transparent animate-pulse-glow pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-gradient-radial from-[#00F5A0]/10 via-[#00D4FF]/4 to-transparent animate-pulse-glow pointer-events-none" aria-hidden="true" />
 
       {/* Secondary glow — offset */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 translate-x-20 translate-y-10 w-[400px] h-[400px] rounded-full bg-gradient-radial from-[#00D4FF]/8 to-transparent animate-pulse-glow pointer-events-none" style={{ animationDelay: "1.5s" }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 translate-x-20 translate-y-10 w-[400px] h-[400px] rounded-full bg-gradient-radial from-[#00D4FF]/8 to-transparent animate-pulse-glow pointer-events-none" style={{ animationDelay: "1.5s" }} aria-hidden="true" />
 
       {/* Section fade edges */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#050816] to-transparent pointer-events-none" />
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#050816] to-transparent pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#050816] to-transparent pointer-events-none" aria-hidden="true" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#050816] to-transparent pointer-events-none" aria-hidden="true" />
 
       {/* Animated ring */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none" aria-hidden="true">
         <svg
           width="600"
           height="600"
           viewBox="0 0 600 600"
           className="animate-rotate-slow opacity-[0.07]"
+          aria-hidden="true"
         >
           <circle
             cx="300"

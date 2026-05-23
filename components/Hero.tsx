@@ -26,23 +26,25 @@ export default function Hero() {
     <section
       ref={sectionRef}
       id="home"
+      aria-label="EV Battery Intelligence Security Platform — Hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden grid-bg"
     >
       {/* Scan line */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
         <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#00F5A0]/30 to-transparent animate-scan-line" />
       </div>
 
       {/* Large background glow orb */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-gradient-radial from-[#00F5A0]/8 via-[#00D4FF]/4 to-transparent animate-pulse-glow pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-gradient-radial from-[#00F5A0]/8 via-[#00D4FF]/4 to-transparent animate-pulse-glow pointer-events-none" aria-hidden="true" />
 
       {/* Outer rotating ring */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none" aria-hidden="true">
         <svg
           width="680"
           height="680"
           viewBox="0 0 680 680"
           className="animate-rotate-slow opacity-[0.12]"
+          aria-hidden="true"
         >
           <circle
             cx="340"
@@ -67,12 +69,13 @@ export default function Hero() {
       </div>
 
       {/* Middle rotating ring (reverse) */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none" aria-hidden="true">
         <svg
           width="520"
           height="520"
           viewBox="0 0 520 520"
           className="animate-rotate-reverse opacity-[0.10]"
+          aria-hidden="true"
         >
           <circle
             cx="260"
@@ -101,13 +104,14 @@ export default function Hero() {
       </div>
 
       {/* Inner ring */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none" aria-hidden="true">
         <svg
           width="340"
           height="340"
           viewBox="0 0 340 340"
           className="animate-rotate-slow opacity-[0.08]"
           style={{ animationDuration: "14s" }}
+          aria-hidden="true"
         >
           <circle
             cx="170"
@@ -122,10 +126,10 @@ export default function Hero() {
       </div>
 
       {/* Radar ping — cyber scan rings */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none" aria-hidden="true">
         <div className="w-[160px] h-[160px] rounded-full border border-[#00F5A0]/35 animate-radar-ping" />
       </div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none" aria-hidden="true">
         <div
           className="w-[160px] h-[160px] rounded-full border border-[#00D4FF]/25 animate-radar-ping"
           style={{ animationDelay: "1.5s" }}
@@ -133,7 +137,7 @@ export default function Hero() {
       </div>
 
       {/* Central shield icon */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none" aria-hidden="true">
         <div className="w-24 h-24 rounded-full border border-[#00F5A0]/15 bg-[#050816]/60 backdrop-blur-sm flex items-center justify-center animate-pulse-glow">
           <svg viewBox="0 0 44 52" fill="none" className="w-10 h-10">
             <defs>
@@ -161,7 +165,7 @@ export default function Hero() {
       </div>
 
       {/* System status — atmospheric cyber indicator */}
-      <div className="absolute top-28 right-6 lg:right-14 glass-card rounded-xl px-4 py-3 pointer-events-none hidden lg:block z-10">
+      <div className="absolute top-28 right-6 lg:right-14 glass-card rounded-xl px-4 py-3 pointer-events-none hidden lg:block z-10" aria-hidden="true">
         <div className="text-[9px] tracking-[0.3em] text-[#CBD5E1]/35 uppercase mb-2">
           System Status
         </div>
@@ -186,6 +190,7 @@ export default function Hero() {
       {PARTICLES.map((p, i) => (
         <div
           key={i}
+          aria-hidden="true"
           className="absolute rounded-full pointer-events-none animate-float"
           style={{
             left: p.x,
