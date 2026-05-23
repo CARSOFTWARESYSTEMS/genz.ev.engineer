@@ -71,7 +71,9 @@ export default function Navigation() {
             </a>
           ))}
           <a
-            href="#join"
+            href="https://autonomous.ev.engineer/internships/battery-cybersecurity"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-5 py-2 rounded-lg border border-[#00F5A0]/50 text-[#00F5A0] text-sm font-bold tracking-wider hover:bg-[#00F5A0]/10 hover:border-[#00F5A0] hover:shadow-lg hover:shadow-[#00F5A0]/10 transition-all duration-200"
             onClick={() => trackCTA("join_header", "header")}
           >
@@ -116,7 +118,9 @@ export default function Navigation() {
             {[...navItems, "Join"].map((item, i) => (
               <motion.a
                 key={item}
-                href={`#${item.toLowerCase()}`}
+                href={item === "Join" ? "https://autonomous.ev.engineer/internships/battery-cybersecurity" : `#${item.toLowerCase()}`}
+                target={item === "Join" ? "_blank" : undefined}
+                rel={item === "Join" ? "noopener noreferrer" : undefined}
                 className="flex items-center py-3.5 text-[#CBD5E1] hover:text-[#00F5A0] font-medium tracking-wide transition-colors border-b border-white/5 last:border-0"
                 onClick={() => {
                   setMenuOpen(false);
