@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #050816;
+    color: #f8fafc;
+    overflow-x: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #050816;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #00f5a0, #00d4ff);
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .grid-bg {
+    background-image: linear-gradient(
+        rgba(0, 245, 160, 0.04) 1px,
+        transparent 1px
+      ),
+      linear-gradient(90deg, rgba(0, 245, 160, 0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .neon-text {
+    text-shadow: 0 0 20px rgba(0, 245, 160, 0.5),
+      0 0 40px rgba(0, 245, 160, 0.3);
+  }
+
+  .blue-text {
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.5),
+      0 0 40px rgba(0, 212, 255, 0.3);
+  }
+}
+
+/* Pause marquee on hover */
+.marquee-pause:hover .animate-marquee-left,
+.marquee-pause:hover .animate-marquee-right {
+  animation-play-state: paused;
+}
